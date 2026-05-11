@@ -1,4 +1,3 @@
-/home/Autistics/reps/cpp/mylang/build/CMakeFiles/fatlang.dir
 /home/Autistics/reps/cpp/mylang/build/CMakeFiles/edit_cache.dir
 /home/Autistics/reps/cpp/mylang/build/CMakeFiles/rebuild_cache.dir
 /home/Autistics/reps/cpp/mylang/build/CMakeFiles/list_install_components.dir
@@ -27,3 +26,11 @@
 /home/Autistics/reps/cpp/mylang/build/_deps/googletest-build/googletest/CMakeFiles/install.dir
 /home/Autistics/reps/cpp/mylang/build/_deps/googletest-build/googletest/CMakeFiles/install/local.dir
 /home/Autistics/reps/cpp/mylang/build/_deps/googletest-build/googletest/CMakeFiles/install/strip.dir
+/home/Autistics/reps/cpp/mylang/build/lib/CMakeFiles/fatlang_lib.dir
+/home/Autistics/reps/cpp/mylang/build/lib/CMakeFiles/fatlang_test.dir
+/home/Autistics/reps/cpp/mylang/build/lib/CMakeFiles/edit_cache.dir
+/home/Autistics/reps/cpp/mylang/build/lib/CMakeFiles/rebuild_cache.dir
+/home/Autistics/reps/cpp/mylang/build/lib/CMakeFiles/list_install_components.dir
+/home/Autistics/reps/cpp/mylang/build/lib/CMakeFiles/install.dir
+/home/Autistics/reps/cpp/mylang/build/lib/CMakeFiles/install/local.dir
+/home/Autistics/reps/cpp/mylang/build/lib/CMakeFiles/install/strip.dir

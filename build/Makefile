@@ -162,19 +162,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named fatlang
-
-# Build rule for target.
-fatlang: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fatlang
-.PHONY : fatlang
-
-# fast build rule for target.
-fatlang/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fatlang.dir/build.make CMakeFiles/fatlang.dir/build
-.PHONY : fatlang/fast
-
-#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -226,29 +213,31 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+#=============================================================================
+# Target rules for targets named fatlang_lib
 
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fatlang.dir/build.make CMakeFiles/fatlang.dir/main.cpp.o
-.PHONY : main.cpp.o
+# Build rule for target.
+fatlang_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fatlang_lib
+.PHONY : fatlang_lib
 
-main.i: main.cpp.i
-.PHONY : main.i
+# fast build rule for target.
+fatlang_lib/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_lib.dir/build.make lib/CMakeFiles/fatlang_lib.dir/build
+.PHONY : fatlang_lib/fast
 
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fatlang.dir/build.make CMakeFiles/fatlang.dir/main.cpp.i
-.PHONY : main.cpp.i
+#=============================================================================
+# Target rules for targets named fatlang_test
 
-main.s: main.cpp.s
-.PHONY : main.s
+# Build rule for target.
+fatlang_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fatlang_test
+.PHONY : fatlang_test
 
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fatlang.dir/build.make CMakeFiles/fatlang.dir/main.cpp.s
-.PHONY : main.cpp.s
+# fast build rule for target.
+fatlang_test/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_test.dir/build.make lib/CMakeFiles/fatlang_test.dir/build
+.PHONY : fatlang_test/fast
 
 # Help Target
 help:
@@ -262,14 +251,12 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... fatlang"
+	@echo "... fatlang_lib"
+	@echo "... fatlang_test"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

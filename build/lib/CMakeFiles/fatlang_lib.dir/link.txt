@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfatlang_lib.a CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o CMakeFiles/fatlang_lib.dir/src/lexer.cpp.o
+/usr/bin/ranlib libfatlang_lib.a

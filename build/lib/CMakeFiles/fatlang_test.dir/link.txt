@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/fatlang_test.dir/link.d CMakeFiles/fatlang_test.dir/test/lexerTest.cpp.o -o fatlang_test  libgtest.a libgtest_main.a libfatlang_lib.a libgtest.a

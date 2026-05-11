@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.21)
 project(fatlang)
 
-set(CMAKE_CXX_STANDART 20)
+set(CMAKE_CXX_STANDARD 20)
 
 include(FetchContent)
 FetchContent_Declare(
@@ -11,4 +11,4 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 
-add_executable(fatlang main.cpp)
+add_subdirectory(lib)
