@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/Autistics/reps/cpp/mylang/lib/test/lexerTest.cpp" "lib/CMakeFiles/fatlang_test.dir/test/lexerTest.cpp.o" "gcc" "lib/CMakeFiles/fatlang_test.dir/test/lexerTest.cpp.o.d"
+  "/home/Autistics/reps/cpp/mylang/lib/test/parserTest.cpp" "lib/CMakeFiles/fatlang_test.dir/test/parserTest.cpp.o" "gcc" "lib/CMakeFiles/fatlang_test.dir/test/parserTest.cpp.o.d"
   "" "lib/fatlang_test" "gcc" "lib/CMakeFiles/fatlang_test.dir/link.d"
   )
 

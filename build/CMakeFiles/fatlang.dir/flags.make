@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/Autistics/reps/cpp/mylang/lib/src
 
-CXX_FLAGS = 
+CXX_FLAGS = -g -std=gnu++20
 

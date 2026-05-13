@@ -189,6 +189,30 @@ fatlang_test/fast:
 	cd /home/Autistics/reps/cpp/mylang/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_test.dir/build.make lib/CMakeFiles/fatlang_test.dir/build
 .PHONY : fatlang_test/fast
 
+src/evaluate.o: src/evaluate.cpp.o
+.PHONY : src/evaluate.o
+
+# target to build an object file
+src/evaluate.cpp.o:
+	cd /home/Autistics/reps/cpp/mylang/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_lib.dir/build.make lib/CMakeFiles/fatlang_lib.dir/src/evaluate.cpp.o
+.PHONY : src/evaluate.cpp.o
+
+src/evaluate.i: src/evaluate.cpp.i
+.PHONY : src/evaluate.i
+
+# target to preprocess a source file
+src/evaluate.cpp.i:
+	cd /home/Autistics/reps/cpp/mylang/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_lib.dir/build.make lib/CMakeFiles/fatlang_lib.dir/src/evaluate.cpp.i
+.PHONY : src/evaluate.cpp.i
+
+src/evaluate.s: src/evaluate.cpp.s
+.PHONY : src/evaluate.s
+
+# target to generate assembly for a file
+src/evaluate.cpp.s:
+	cd /home/Autistics/reps/cpp/mylang/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_lib.dir/build.make lib/CMakeFiles/fatlang_lib.dir/src/evaluate.cpp.s
+.PHONY : src/evaluate.cpp.s
+
 src/fatlang.o: src/fatlang.cpp.o
 .PHONY : src/fatlang.o
 
@@ -237,6 +261,30 @@ src/lexer.cpp.s:
 	cd /home/Autistics/reps/cpp/mylang/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_lib.dir/build.make lib/CMakeFiles/fatlang_lib.dir/src/lexer.cpp.s
 .PHONY : src/lexer.cpp.s
 
+src/parser.o: src/parser.cpp.o
+.PHONY : src/parser.o
+
+# target to build an object file
+src/parser.cpp.o:
+	cd /home/Autistics/reps/cpp/mylang/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_lib.dir/build.make lib/CMakeFiles/fatlang_lib.dir/src/parser.cpp.o
+.PHONY : src/parser.cpp.o
+
+src/parser.i: src/parser.cpp.i
+.PHONY : src/parser.i
+
+# target to preprocess a source file
+src/parser.cpp.i:
+	cd /home/Autistics/reps/cpp/mylang/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_lib.dir/build.make lib/CMakeFiles/fatlang_lib.dir/src/parser.cpp.i
+.PHONY : src/parser.cpp.i
+
+src/parser.s: src/parser.cpp.s
+.PHONY : src/parser.s
+
+# target to generate assembly for a file
+src/parser.cpp.s:
+	cd /home/Autistics/reps/cpp/mylang/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_lib.dir/build.make lib/CMakeFiles/fatlang_lib.dir/src/parser.cpp.s
+.PHONY : src/parser.cpp.s
+
 test/lexerTest.o: test/lexerTest.cpp.o
 .PHONY : test/lexerTest.o
 
@@ -261,6 +309,30 @@ test/lexerTest.cpp.s:
 	cd /home/Autistics/reps/cpp/mylang/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_test.dir/build.make lib/CMakeFiles/fatlang_test.dir/test/lexerTest.cpp.s
 .PHONY : test/lexerTest.cpp.s
 
+test/parserTest.o: test/parserTest.cpp.o
+.PHONY : test/parserTest.o
+
+# target to build an object file
+test/parserTest.cpp.o:
+	cd /home/Autistics/reps/cpp/mylang/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_test.dir/build.make lib/CMakeFiles/fatlang_test.dir/test/parserTest.cpp.o
+.PHONY : test/parserTest.cpp.o
+
+test/parserTest.i: test/parserTest.cpp.i
+.PHONY : test/parserTest.i
+
+# target to preprocess a source file
+test/parserTest.cpp.i:
+	cd /home/Autistics/reps/cpp/mylang/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_test.dir/build.make lib/CMakeFiles/fatlang_test.dir/test/parserTest.cpp.i
+.PHONY : test/parserTest.cpp.i
+
+test/parserTest.s: test/parserTest.cpp.s
+.PHONY : test/parserTest.s
+
+# target to generate assembly for a file
+test/parserTest.cpp.s:
+	cd /home/Autistics/reps/cpp/mylang/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_test.dir/build.make lib/CMakeFiles/fatlang_test.dir/test/parserTest.cpp.s
+.PHONY : test/parserTest.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -275,15 +347,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... fatlang_lib"
 	@echo "... fatlang_test"
+	@echo "... src/evaluate.o"
+	@echo "... src/evaluate.i"
+	@echo "... src/evaluate.s"
 	@echo "... src/fatlang.o"
 	@echo "... src/fatlang.i"
 	@echo "... src/fatlang.s"
 	@echo "... src/lexer.o"
 	@echo "... src/lexer.i"
 	@echo "... src/lexer.s"
+	@echo "... src/parser.o"
+	@echo "... src/parser.i"
+	@echo "... src/parser.s"
 	@echo "... test/lexerTest.o"
 	@echo "... test/lexerTest.i"
 	@echo "... test/lexerTest.s"
+	@echo "... test/parserTest.o"
+	@echo "... test/parserTest.i"
+	@echo "... test/parserTest.s"
 .PHONY : help
 
 

@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 
 enum class TokenType { 
@@ -6,6 +7,7 @@ enum class TokenType {
     PLUS, MINUS, STAR, SLASH, EQUALS, // + - * / =
     LPAR, RPAR, // ( )
     EOFILE, // End of file
+    SEMICOLON, // ;
 };
 
 struct Token {

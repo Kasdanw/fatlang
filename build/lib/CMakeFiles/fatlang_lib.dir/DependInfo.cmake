@@ -8,8 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/Autistics/reps/cpp/mylang/lib/src/evaluate.cpp" "lib/CMakeFiles/fatlang_lib.dir/src/evaluate.cpp.o" "gcc" "lib/CMakeFiles/fatlang_lib.dir/src/evaluate.cpp.o.d"
   "/home/Autistics/reps/cpp/mylang/lib/src/fatlang.cpp" "lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o" "gcc" "lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o.d"
   "/home/Autistics/reps/cpp/mylang/lib/src/lexer.cpp" "lib/CMakeFiles/fatlang_lib.dir/src/lexer.cpp.o" "gcc" "lib/CMakeFiles/fatlang_lib.dir/src/lexer.cpp.o.d"
+  "/home/Autistics/reps/cpp/mylang/lib/src/parser.cpp" "lib/CMakeFiles/fatlang_lib.dir/src/parser.cpp.o" "gcc" "lib/CMakeFiles/fatlang_lib.dir/src/parser.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

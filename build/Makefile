@@ -162,6 +162,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named fatlang
+
+# Build rule for target.
+fatlang: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fatlang
+.PHONY : fatlang
+
+# fast build rule for target.
+fatlang/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fatlang.dir/build.make CMakeFiles/fatlang.dir/build
+.PHONY : fatlang/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -239,6 +252,30 @@ fatlang_test/fast:
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_test.dir/build.make lib/CMakeFiles/fatlang_test.dir/build
 .PHONY : fatlang_test/fast
 
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fatlang.dir/build.make CMakeFiles/fatlang.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fatlang.dir/build.make CMakeFiles/fatlang.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fatlang.dir/build.make CMakeFiles/fatlang.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -251,12 +288,16 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... fatlang"
 	@echo "... fatlang_lib"
 	@echo "... fatlang_test"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

@@ -1,17 +1,25 @@
 #include "AST.h"
-#include <string>
+#include "token.h"
 #include "parser.h"
 
+#include <string>
+#include <iostream>
 
 ASTNode* parser::parse(const std::vector<Token>& tokens) {
-    this -> tokens = tokens;
+    this->tokens = tokens;
     pos = 0;
-    ASTNode* result = ParseExpresion();
-
-    if (currentToken().type == TokenType::EOFILE) {
-        return result;
+    
+    ASTNode* result = nullptr;
+    
+    while (currentToken().type != TokenType::EOFILE) {
+        result = ParseAssigment();
+        
+        if (currentToken().type == TokenType::SEMICOLON) {
+            advance();
+        }
     }
-    return nullptr;
+    
+    return result;
 }
 
 Token parser::currentToken() {
@@ -27,7 +35,6 @@ bool parser::match(TokenType type) {
         advance();
         return true;
     }
-
     return false;
 }
 
@@ -44,16 +51,16 @@ ASTNode* parser::ParseFactor() {
         Token t = consume(TokenType::NUMBER);
         int num = std::stoi(t.value);
         ASTNode* numValue = new ASTNode;
-        numValue -> type = Number;
-        numValue -> numValue = num;
+        numValue->type = Number;
+        numValue->numValue = num;
         return numValue;
     }
     else if (currentToken().type == TokenType::IDENTIFIER) {
         Token t = consume(TokenType::IDENTIFIER);
         std::string str = t.value;
         ASTNode* strValue = new ASTNode;
-        strValue -> type = Identifier;
-        strValue -> idValue = str;
+        strValue->type = Identifier;
+        strValue->idValue = str;
         return strValue;
     }
     else if (currentToken().type == TokenType::LPAR) {
@@ -72,13 +79,33 @@ ASTNode* parser::ParseTerm() {
         advance();
         ASTNode* right = ParseFactor();
         ASTNode* node = new ASTNode;
-        node -> type = BinaryOp;
-        node -> op = op;
-        node -> left = left;
-        node -> right = right;
+        node->type = BinaryOp;
+        node->op = op;
+        node->left = left;
+        node->right = right;
         left = node;
     }
     return left;
+}
+
+ASTNode* parser::ParseAssigment() {
+    if (currentToken().type == TokenType::IDENTIFIER && 
+        pos + 1 < tokens.size() && 
+        tokens[pos + 1].type == TokenType::EQUALS) {
+        
+        std::string name = currentToken().value;
+        advance();
+        advance();
+        
+        ASTNode* right = ParseExpresion();
+        ASTNode* node = new ASTNode;
+        node->type = Assigment;
+        node->idValue = name;
+        node->right = right;
+        return node;
+    }
+    
+    return ParseExpresion();
 }
 
 ASTNode* parser::ParseExpresion() {
@@ -88,11 +115,25 @@ ASTNode* parser::ParseExpresion() {
         advance();
         ASTNode* right = ParseTerm();
         ASTNode* node = new ASTNode;
-        node -> type = BinaryOp;
-        node -> op = op;
-        node -> left = left;
-        node -> right = right;
+        node->type = BinaryOp;
+        node->op = op;
+        node->left = left;
+        node->right = right;
         left = node;
     }
     return left;
+}
+
+void parser::parseAll(const std::vector<Token>& tokens, std::vector<ASTNode*>& statements) {
+    this->tokens = tokens;
+    pos = 0;
+    
+    while (currentToken().type != TokenType::EOFILE) {
+        ASTNode* stmt = ParseAssigment();
+        if (stmt) statements.push_back(stmt);
+        
+        if (currentToken().type == TokenType::SEMICOLON) {
+            advance();
+        }
+    }
 }

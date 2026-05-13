@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/Autistics/reps/cpp/mylang/lib/src -isystem /home/Autistics/reps/cpp/mylang/build/_deps/googletest-src/googletest/include -isystem /home/Autistics/reps/cpp/mylang/build/_deps/googletest-src/googletest
 
-CXX_FLAGS = -std=gnu++20
+CXX_FLAGS = -g -std=gnu++20
 

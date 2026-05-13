@@ -12,3 +12,6 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 
 add_subdirectory(lib)
+add_executable(fatlang src/main.cpp)
+target_link_libraries(fatlang PRIVATE fatlang_lib)
+target_include_directories(fatlang PRIVATE lib/src)

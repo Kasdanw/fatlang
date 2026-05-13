@@ -2,7 +2,8 @@ lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o: \
  /home/Autistics/reps/cpp/mylang/lib/src/fatlang.cpp \
  /usr/include/stdc-predef.h \
  /home/Autistics/reps/cpp/mylang/lib/src/fatlang.h \
- /usr/include/c++/15.2.1/any /usr/include/c++/15.2.1/bits/version.h \
+ /usr/include/c++/15.2.1/iostream \
+ /usr/include/c++/15.2.1/bits/requires_hosted.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -11,14 +12,6 @@ lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o: \
  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
  /usr/include/c++/15.2.1/pstl/pstl_config.h \
- /usr/include/c++/15.2.1/initializer_list \
- /usr/include/c++/15.2.1/typeinfo \
- /usr/include/c++/15.2.1/bits/exception.h \
- /usr/include/c++/15.2.1/bits/hash_bytes.h /usr/include/c++/15.2.1/new \
- /usr/include/c++/15.2.1/type_traits \
- /usr/include/c++/15.2.1/bits/utility.h \
- /usr/include/c++/15.2.1/bits/move.h /usr/include/c++/15.2.1/iostream \
- /usr/include/c++/15.2.1/bits/requires_hosted.h \
  /usr/include/c++/15.2.1/ostream /usr/include/c++/15.2.1/bits/ostream.h \
  /usr/include/c++/15.2.1/ios /usr/include/c++/15.2.1/iosfwd \
  /usr/include/c++/15.2.1/bits/stringfwd.h \
@@ -33,9 +26,14 @@ lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o: \
  /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/locale_t.h \
  /usr/include/bits/types/__locale_t.h /usr/include/c++/15.2.1/exception \
+ /usr/include/c++/15.2.1/bits/exception.h \
+ /usr/include/c++/15.2.1/bits/version.h \
  /usr/include/c++/15.2.1/bits/exception_ptr.h \
  /usr/include/c++/15.2.1/bits/exception_defines.h \
  /usr/include/c++/15.2.1/bits/cxxabi_init_exception.h \
+ /usr/include/c++/15.2.1/typeinfo \
+ /usr/include/c++/15.2.1/bits/hash_bytes.h /usr/include/c++/15.2.1/new \
+ /usr/include/c++/15.2.1/bits/move.h /usr/include/c++/15.2.1/type_traits \
  /usr/include/c++/15.2.1/bits/nested_exception.h \
  /usr/include/c++/15.2.1/bits/char_traits.h \
  /usr/include/c++/15.2.1/compare /usr/include/c++/15.2.1/concepts \
@@ -97,11 +95,13 @@ lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o: \
  /usr/include/c++/15.2.1/ext/numeric_traits.h \
  /usr/include/c++/15.2.1/bits/stl_algobase.h \
  /usr/include/c++/15.2.1/bits/stl_pair.h \
+ /usr/include/c++/15.2.1/bits/utility.h \
  /usr/include/c++/15.2.1/debug/debug.h \
  /usr/include/c++/15.2.1/bits/predefined_ops.h \
  /usr/include/c++/15.2.1/bit /usr/include/c++/15.2.1/bits/refwrap.h \
  /usr/include/c++/15.2.1/bits/invoke.h \
  /usr/include/c++/15.2.1/bits/range_access.h \
+ /usr/include/c++/15.2.1/initializer_list \
  /usr/include/c++/15.2.1/bits/basic_string.h \
  /usr/include/c++/15.2.1/ext/alloc_traits.h \
  /usr/include/c++/15.2.1/bits/alloc_traits.h \

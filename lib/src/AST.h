@@ -1,8 +1,9 @@
 #pragma once
 
 #include "lexer.h"
+#include "token.h"
 #include <string>
-enum NodeType {Number, Identifier, BinaryOp};
+enum NodeType {Number, Identifier, BinaryOp, Assigment};
 
 struct ASTNode {
     int numValue;

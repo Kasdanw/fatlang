@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fatlang.dir/link.d"
-  "CMakeFiles/fatlang.dir/main.cpp.o"
-  "CMakeFiles/fatlang.dir/main.cpp.o.d"
+  "CMakeFiles/fatlang.dir/src/main.cpp.o"
+  "CMakeFiles/fatlang.dir/src/main.cpp.o.d"
   "fatlang"
   "fatlang.pdb"
 )

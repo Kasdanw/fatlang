@@ -3,6 +3,7 @@ fatlang_test: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o \
   CMakeFiles/fatlang_test.dir/test/lexerTest.cpp.o \
+  CMakeFiles/fatlang_test.dir/test/parserTest.cpp.o \
   libgtest.a \
   libgtest_main.a \
   libfatlang_lib.a \
@@ -42,6 +43,8 @@ fatlang_test: \
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o:
 
 CMakeFiles/fatlang_test.dir/test/lexerTest.cpp.o:
+
+CMakeFiles/fatlang_test.dir/test/parserTest.cpp.o:
 
 libgtest.a:
 

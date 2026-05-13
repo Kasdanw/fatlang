@@ -6,6 +6,7 @@
 class parser {
 public:
     ASTNode* parse(const std::vector<Token>& tokens);
+    void parseAll(const std::vector<Token>& tokens, std::vector<ASTNode*>& statements);
 private:
 
     std::vector<Token> tokens;
@@ -13,6 +14,7 @@ private:
     int pos;
 
     ASTNode* ParseExpresion();
+    ASTNode* ParseAssigment();
     ASTNode* ParseTerm();
     ASTNode* ParseFactor();
 

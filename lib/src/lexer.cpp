@@ -9,6 +9,7 @@ std::vector<Token> lexer::process(std::string_view code) {
     int line = 0;
     // The cycle that will go to the end of the lines in the code
     while (line < code.length()) {
+        if (line >= code.length()) break;
         char c = code[line];
         // Check for spaces, line skips, or tabs
         if (c == ' ' || c == '\t' || c == '\n') {
@@ -18,12 +19,17 @@ std::vector<Token> lexer::process(std::string_view code) {
         // Check for number or not
         if (c >= '0' && c <= '9') {
             int start = line;
-            while (code[line] >= '0' && code[line] <= '9') {
+            while (line < code.length() && code[line] >= '0' && code[line] <= '9') {
                 line++;
             }
             std::string value = std::string(code.substr(start, line - start));
             tokens.push_back(Token{TokenType::NUMBER, value});
             continue;
+        }
+
+        if (c == ';') {
+            tokens.push_back(Token{TokenType::SEMICOLON});
+            line++;
         }
 
         if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || c == '_') {
