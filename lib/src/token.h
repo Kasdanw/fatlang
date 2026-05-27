@@ -3,6 +3,7 @@
 
 enum class TokenType { 
     PRINT, // print
+    LET,
     IDENTIFIER, // Variables or name functions
     NUMBER,// This number or not 1, 2, 3, 4, 5, 6........
     STRING, // This string or not "Hello world!"

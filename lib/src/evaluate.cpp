@@ -29,6 +29,12 @@ int evaluate(ASTNode* node, std::map<std::string, int>& variables) {
             }
         }
 
+        case Let: {
+            int value = evaluate(node->right, variables);
+            variables[node->idValue] = value;
+            return value;
+        }
+
         case Print: {
             if (node->left->type == StringLiteral) {
                 std::cout << node->left->idValue << std::endl;

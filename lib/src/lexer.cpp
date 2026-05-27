@@ -57,7 +57,9 @@ std::vector<Token> lexer::process(std::string_view code) {
             if (value == "print") {
                 tokens.push_back(Token{TokenType::PRINT});
             } 
-
+            else if (value == "let") {
+                tokens.push_back(Token{TokenType::LET});
+            }
             else {
                 tokens.push_back(Token{TokenType::IDENTIFIER, value});
             }

@@ -108,6 +108,19 @@ ASTNode* parser::ParseAssigment() {
         return node;
     }
 
+    if (currentToken().type == TokenType::LET) {
+        consume(TokenType::LET);
+        std::string name = currentToken().value;
+        consume(TokenType::IDENTIFIER);
+        consume(TokenType::EQUALS);
+        ASTNode* arg = ParseExpresion();
+        ASTNode* node = new ASTNode;
+        node->idValue = name;
+        node->right = arg;
+        node->type = Let;
+        return node;
+    }
+
     if (currentToken().type == TokenType::IDENTIFIER && 
         pos + 1 < tokens.size() && 
         tokens[pos + 1].type == TokenType::EQUALS) {
