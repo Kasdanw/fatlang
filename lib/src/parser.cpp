@@ -55,6 +55,13 @@ ASTNode* parser::ParseFactor() {
         numValue->numValue = num;
         return numValue;
     }
+    else if (currentToken().type == TokenType::STRING) {
+        Token t = consume(TokenType::STRING);
+        ASTNode* str = new ASTNode;
+        str->type = StringLiteral;
+        str->idValue = t.value;
+        return str;
+    }
     else if (currentToken().type == TokenType::IDENTIFIER) {
         Token t = consume(TokenType::IDENTIFIER);
         std::string str = t.value;

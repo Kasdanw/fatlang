@@ -3,7 +3,7 @@
 #include "lexer.h"
 #include "token.h"
 #include <string>
-enum NodeType {Number, Identifier, BinaryOp, Assigment, Print};
+enum NodeType {Number, Identifier, BinaryOp, Assigment, Print, StringLiteral};
 
 struct ASTNode {
     int numValue;

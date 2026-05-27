@@ -28,6 +28,17 @@ std::vector<Token> lexer::process(std::string_view code) {
             continue;
         }
 
+        if (c == '"') {
+            line++;
+            int start = line;
+            while (line < code.length() && code[line] != '"') {
+                line++;
+            }
+            std::string value = std::string(code.substr(start, line - start));
+            tokens.push_back(Token{TokenType::STRING, value});
+            line++;
+        }
+
         if (c == ';') {
             tokens.push_back(Token{TokenType::SEMICOLON});
             line++;

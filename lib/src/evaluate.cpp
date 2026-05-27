@@ -1,4 +1,5 @@
 #include "AST.h"
+#include "token.h"
 #include <iostream>
 #include <map>
 
@@ -29,9 +30,14 @@ int evaluate(ASTNode* node, std::map<std::string, int>& variables) {
         }
 
         case Print: {
-            int value = evaluate(node->left, variables);
-            std::cout << value << std::endl;
-            return value;
+            if (node->left->type == StringLiteral) {
+                std::cout << node->left->idValue << std::endl;
+                return 0;
+            } else {
+                int value = evaluate(node->left, variables);
+                std::cout << value << std::endl;            
+                return value;
+            }
         }
     }
 }
