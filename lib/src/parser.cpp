@@ -89,6 +89,18 @@ ASTNode* parser::ParseTerm() {
 }
 
 ASTNode* parser::ParseAssigment() {
+    
+    if (currentToken().type == TokenType::PRINT) {
+        consume(TokenType::PRINT);
+        consume(TokenType::LPAR);
+        ASTNode* arg = ParseExpresion();
+        consume(TokenType::RPAR);
+        ASTNode* node = new ASTNode;
+        node->left = arg;
+        node->type = Print;
+        return node;
+    }
+
     if (currentToken().type == TokenType::IDENTIFIER && 
         pos + 1 < tokens.size() && 
         tokens[pos + 1].type == TokenType::EQUALS) {
@@ -104,7 +116,7 @@ ASTNode* parser::ParseAssigment() {
         node->right = right;
         return node;
     }
-    
+
     return ParseExpresion();
 }
 

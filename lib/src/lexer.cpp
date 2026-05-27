@@ -1,4 +1,5 @@
 #include "lexer.h"
+#include "token.h"
 #include <string>
 #include <string_view>
 #include <vector>
@@ -42,7 +43,13 @@ std::vector<Token> lexer::process(std::string_view code) {
                 line++;
             }
             std::string value = std::string(code.substr(start, line - start));
-            tokens.push_back(Token{TokenType::IDENTIFIER, value});
+            if (value == "print") {
+                tokens.push_back(Token{TokenType::PRINT});
+            } 
+
+            else {
+                tokens.push_back(Token{TokenType::IDENTIFIER, value});
+            }
             continue;
         }
 

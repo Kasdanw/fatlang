@@ -40,6 +40,6 @@ int main(int argc, char** argv) {
         result = evaluate(stmt, variables);
     }
     
-    std::cout << result << std::endl;
+    // std::cout << result << std::endl;
     return 0;
 }

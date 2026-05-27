@@ -10,7 +10,7 @@ int evaluate(ASTNode* node, std::map<std::string, int>& variables) {
             if (it != variables.end()) return it->second;
             else return 0;
         }
-        case Assigment:{
+        case Assigment: {
             int value = evaluate(node->right, variables);
             variables[node->idValue] = value;
             return value;
@@ -26,6 +26,12 @@ int evaluate(ASTNode* node, std::map<std::string, int>& variables) {
                 case TokenType::SLASH: return left / right;
                 default: std::cerr << "Unknow operation"; return 0;
             }
+        }
+
+        case Print: {
+            int value = evaluate(node->left, variables);
+            std::cout << value << std::endl;
+            return value;
         }
     }
 }

@@ -2,6 +2,7 @@
 #include <string>
 
 enum class TokenType { 
+    PRINT, // print
     IDENTIFIER, // Variables or name functions
     NUMBER, // This number or not 1, 2, 3, 4, 5, 6........
     PLUS, MINUS, STAR, SLASH, EQUALS, // + - * / =
