@@ -73,23 +73,59 @@ std::vector<Token> lexer::process(std::string_view code) {
         }
 
         // Checking for the presence or absence of data characters.
-        if (c == '-' || c == '+' || c == '*' || c == '/' || c == '=') {
+        if (c == '-' || c == '+' || c == '*' || c == '/' || c == '=' || c == '<' || c == '>' || c == '!') {
             if (c == '-') {
                 tokens.push_back(Token{TokenType::MINUS, std::string(1, c)});
+                line++;
             }
             else if (c == '+') {
                 tokens.push_back(Token{TokenType::PLUS, std::string(1, c)});
+                line++;
             }
             else if (c == '*') {
                 tokens.push_back(Token{TokenType::STAR, std::string(1, c)});
+                line++;
             }
             else if (c == '/') {
                 tokens.push_back(Token{TokenType::SLASH, std::string(1, c)});
+                line++;
+            }
+            else if (c == '!') {
+                if (line + 1 < code.length() && code[line + 1] == '=') {
+                    tokens.push_back(Token{TokenType::NE, "!="});
+                    line += 2;
+                }
+            }
+            else if (c == '>') {
+                if (line + 1 < code.length() && code[line + 1] == '=') {
+                    tokens.push_back(Token{TokenType::GE, ">="});
+                    line += 2;
+                }
+                else {
+                    tokens.push_back(Token{TokenType::GT, ">"});
+                    line++;
+                }
+            }
+            else if (c == '<') {
+                if (line + 1 < code.length() && code[line + 1] == '=') {
+                    tokens.push_back(Token{TokenType::LE, "<="});
+                    line += 2;
+                }
+                else {
+                    tokens.push_back(Token{TokenType::LT, "<"});
+                    line++;
+                }
             }
             else if (c == '=') {
-                tokens.push_back(Token{TokenType::EQUALS, std::string(1, c)});
+                if (line + 1 < code.length() && code[line + 1] == '=') {
+                    tokens.push_back(Token{TokenType::EQEQ, "=="});
+                    line += 2;
+                } 
+                else {
+                    tokens.push_back(Token{TokenType::EQUALS, "="});
+                    line++;
+                }
             }
-            line++;
         }
 
 

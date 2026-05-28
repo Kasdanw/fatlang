@@ -9,6 +9,7 @@ enum class TokenType {
     NUMBER,// This number or not 1, 2, 3, 4, 5, 6........
     STRING, // This string or not "Hello world!"
     PLUS, MINUS, STAR, SLASH, EQUALS, // + - * / =
+    EQEQ, LT, GT, LE, GE, NE, // == < > <= >= !=
     LPAR, RPAR, // ( )
     EOFILE, // End of file
     SEMICOLON, // ;
