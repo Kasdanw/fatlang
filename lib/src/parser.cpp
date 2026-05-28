@@ -3,7 +3,6 @@
 #include "parser.h"
 
 #include <string>
-#include <iostream>
 
 ASTNode* parser::parse(const std::vector<Token>& tokens) {
     this->tokens = tokens;
@@ -107,6 +106,19 @@ ASTNode* parser::ParseAssigment() {
         node->type = Print;
         return node;
     }
+
+    if (currentToken().type == TokenType::IF) {
+        consume(TokenType::IF);
+        consume(TokenType::LPAR);
+        ASTNode* condition = ParseAssigment();
+        consume(TokenType::RPAR);
+        ASTNode* body = ParseAssigment();
+        ASTNode* node = new ASTNode;
+        node->left = condition;
+        node->right = body;
+        node->type = If;
+        return node;
+     }
 
     if (currentToken().type == TokenType::LET) {
         consume(TokenType::LET);

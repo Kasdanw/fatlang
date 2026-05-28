@@ -43,6 +43,14 @@ int evaluate(ASTNode* node, std::map<std::string, int>& variables) {
             return value;
         }
 
+        case If: {
+            int condition = evaluate(node->left, variables);
+            if (condition != 0) {
+                return evaluate(node->right, variables);
+            }
+            return 0;
+        }
+
         case Print: {
             if (node->left->type == StringLiteral) {
                 std::cout << node->left->idValue << std::endl;

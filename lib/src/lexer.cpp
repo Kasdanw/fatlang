@@ -60,6 +60,12 @@ std::vector<Token> lexer::process(std::string_view code) {
             else if (value == "let") {
                 tokens.push_back(Token{TokenType::LET});
             }
+            else if (value == "if") {
+                tokens.push_back(Token{TokenType::IF});
+            }
+            else if (value == "else") {
+                tokens.push_back(Token{TokenType::ELSE});
+            }
             else {
                 tokens.push_back(Token{TokenType::IDENTIFIER, value});
             }
