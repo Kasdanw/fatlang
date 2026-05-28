@@ -12,6 +12,10 @@ int evaluate(ASTNode* node, std::map<std::string, int>& variables) {
             else return 0;
         }
         case Assigment: {
+            if (variables.find(node->idValue) == variables.end()) {
+                std::cerr << "variable not found" << std::endl;
+                exit(1);
+            }
             int value = evaluate(node->right, variables);
             variables[node->idValue] = value;
             return value;
@@ -30,6 +34,10 @@ int evaluate(ASTNode* node, std::map<std::string, int>& variables) {
         }
 
         case Let: {
+            if (variables.find(node->idValue) != variables.end()) {
+                std::cerr << "variable already exists" << std::endl;
+                exit(1);
+            }
             int value = evaluate(node->right, variables);
             variables[node->idValue] = value;
             return value;
@@ -41,7 +49,7 @@ int evaluate(ASTNode* node, std::map<std::string, int>& variables) {
                 return 0;
             } else {
                 int value = evaluate(node->left, variables);
-                std::cout << value << std::endl;            
+                std::cout << value << std::endl;
                 return value;
             }
         }

@@ -1,5 +1,7 @@
-let a = 100;
-x = 10;
-print("Hello world!");
-print(x);
-print(a)
+a = 100;
+let a = 10;
+print(a);
+a = 20;
+print(a);
+let a = 30;
+print(a);
