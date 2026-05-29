@@ -213,30 +213,6 @@ src/evaluate.cpp.s:
 	cd /home/Autistics/reps/cpp/mylang/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_lib.dir/build.make lib/CMakeFiles/fatlang_lib.dir/src/evaluate.cpp.s
 .PHONY : src/evaluate.cpp.s
 
-src/fatlang.o: src/fatlang.cpp.o
-.PHONY : src/fatlang.o
-
-# target to build an object file
-src/fatlang.cpp.o:
-	cd /home/Autistics/reps/cpp/mylang/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_lib.dir/build.make lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o
-.PHONY : src/fatlang.cpp.o
-
-src/fatlang.i: src/fatlang.cpp.i
-.PHONY : src/fatlang.i
-
-# target to preprocess a source file
-src/fatlang.cpp.i:
-	cd /home/Autistics/reps/cpp/mylang/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_lib.dir/build.make lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.i
-.PHONY : src/fatlang.cpp.i
-
-src/fatlang.s: src/fatlang.cpp.s
-.PHONY : src/fatlang.s
-
-# target to generate assembly for a file
-src/fatlang.cpp.s:
-	cd /home/Autistics/reps/cpp/mylang/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/fatlang_lib.dir/build.make lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.s
-.PHONY : src/fatlang.cpp.s
-
 src/lexer.o: src/lexer.cpp.o
 .PHONY : src/lexer.o
 
@@ -350,9 +326,6 @@ help:
 	@echo "... src/evaluate.o"
 	@echo "... src/evaluate.i"
 	@echo "... src/evaluate.s"
-	@echo "... src/fatlang.o"
-	@echo "... src/fatlang.i"
-	@echo "... src/fatlang.s"
 	@echo "... src/lexer.o"
 	@echo "... src/lexer.i"
 	@echo "... src/lexer.s"

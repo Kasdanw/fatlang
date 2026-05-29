@@ -86,24 +86,10 @@ lib/CMakeFiles/fatlang_lib.dir/src/evaluate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fatlang_lib.dir/src/evaluate.cpp.s"
 	cd /home/Autistics/reps/cpp/mylang/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Autistics/reps/cpp/mylang/lib/src/evaluate.cpp -o CMakeFiles/fatlang_lib.dir/src/evaluate.cpp.s
 
-lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o: lib/CMakeFiles/fatlang_lib.dir/flags.make
-lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o: /home/Autistics/reps/cpp/mylang/lib/src/fatlang.cpp
-lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o: lib/CMakeFiles/fatlang_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Autistics/reps/cpp/mylang/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o"
-	cd /home/Autistics/reps/cpp/mylang/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o -MF CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o.d -o CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o -c /home/Autistics/reps/cpp/mylang/lib/src/fatlang.cpp
-
-lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.i"
-	cd /home/Autistics/reps/cpp/mylang/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Autistics/reps/cpp/mylang/lib/src/fatlang.cpp > CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.i
-
-lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.s"
-	cd /home/Autistics/reps/cpp/mylang/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Autistics/reps/cpp/mylang/lib/src/fatlang.cpp -o CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.s
-
 lib/CMakeFiles/fatlang_lib.dir/src/lexer.cpp.o: lib/CMakeFiles/fatlang_lib.dir/flags.make
 lib/CMakeFiles/fatlang_lib.dir/src/lexer.cpp.o: /home/Autistics/reps/cpp/mylang/lib/src/lexer.cpp
 lib/CMakeFiles/fatlang_lib.dir/src/lexer.cpp.o: lib/CMakeFiles/fatlang_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Autistics/reps/cpp/mylang/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object lib/CMakeFiles/fatlang_lib.dir/src/lexer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Autistics/reps/cpp/mylang/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object lib/CMakeFiles/fatlang_lib.dir/src/lexer.cpp.o"
 	cd /home/Autistics/reps/cpp/mylang/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/fatlang_lib.dir/src/lexer.cpp.o -MF CMakeFiles/fatlang_lib.dir/src/lexer.cpp.o.d -o CMakeFiles/fatlang_lib.dir/src/lexer.cpp.o -c /home/Autistics/reps/cpp/mylang/lib/src/lexer.cpp
 
 lib/CMakeFiles/fatlang_lib.dir/src/lexer.cpp.i: cmake_force
@@ -117,7 +103,7 @@ lib/CMakeFiles/fatlang_lib.dir/src/lexer.cpp.s: cmake_force
 lib/CMakeFiles/fatlang_lib.dir/src/parser.cpp.o: lib/CMakeFiles/fatlang_lib.dir/flags.make
 lib/CMakeFiles/fatlang_lib.dir/src/parser.cpp.o: /home/Autistics/reps/cpp/mylang/lib/src/parser.cpp
 lib/CMakeFiles/fatlang_lib.dir/src/parser.cpp.o: lib/CMakeFiles/fatlang_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Autistics/reps/cpp/mylang/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object lib/CMakeFiles/fatlang_lib.dir/src/parser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Autistics/reps/cpp/mylang/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object lib/CMakeFiles/fatlang_lib.dir/src/parser.cpp.o"
 	cd /home/Autistics/reps/cpp/mylang/build/lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/CMakeFiles/fatlang_lib.dir/src/parser.cpp.o -MF CMakeFiles/fatlang_lib.dir/src/parser.cpp.o.d -o CMakeFiles/fatlang_lib.dir/src/parser.cpp.o -c /home/Autistics/reps/cpp/mylang/lib/src/parser.cpp
 
 lib/CMakeFiles/fatlang_lib.dir/src/parser.cpp.i: cmake_force
@@ -131,7 +117,6 @@ lib/CMakeFiles/fatlang_lib.dir/src/parser.cpp.s: cmake_force
 # Object files for target fatlang_lib
 fatlang_lib_OBJECTS = \
 "CMakeFiles/fatlang_lib.dir/src/evaluate.cpp.o" \
-"CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o" \
 "CMakeFiles/fatlang_lib.dir/src/lexer.cpp.o" \
 "CMakeFiles/fatlang_lib.dir/src/parser.cpp.o"
 
@@ -139,12 +124,11 @@ fatlang_lib_OBJECTS = \
 fatlang_lib_EXTERNAL_OBJECTS =
 
 lib/libfatlang_lib.a: lib/CMakeFiles/fatlang_lib.dir/src/evaluate.cpp.o
-lib/libfatlang_lib.a: lib/CMakeFiles/fatlang_lib.dir/src/fatlang.cpp.o
 lib/libfatlang_lib.a: lib/CMakeFiles/fatlang_lib.dir/src/lexer.cpp.o
 lib/libfatlang_lib.a: lib/CMakeFiles/fatlang_lib.dir/src/parser.cpp.o
 lib/libfatlang_lib.a: lib/CMakeFiles/fatlang_lib.dir/build.make
 lib/libfatlang_lib.a: lib/CMakeFiles/fatlang_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/Autistics/reps/cpp/mylang/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libfatlang_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/Autistics/reps/cpp/mylang/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libfatlang_lib.a"
 	cd /home/Autistics/reps/cpp/mylang/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/fatlang_lib.dir/cmake_clean_target.cmake
 	cd /home/Autistics/reps/cpp/mylang/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fatlang_lib.dir/link.txt --verbose=$(VERBOSE)
 

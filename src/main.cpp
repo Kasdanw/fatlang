@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
         return 1;
     }
     
-    std::map<std::string, int> variables;
+    std::map<std::string, std::string> variables;
     
     int result = 0;
     for (ASTNode* stmt : statements) {

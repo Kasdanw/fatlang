@@ -4,4 +4,4 @@
 #include <string>
 #include <map>
 
-int evaluate(ASTNode* node, std::map<std::string, int>& variables);
+int evaluate(ASTNode* node, std::map<std::string, std::string>& variables);
