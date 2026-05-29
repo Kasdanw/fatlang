@@ -12,8 +12,10 @@ a minimalist programming language written in C++. not for real world application
 ## build
 
 ```
-cmake -B build
-cmake --build build
+mkdir build
+cd build
+cmake ..
+cmake --build .
 ```
 
 requires CMake 3.21+ and a C++20 compiler.
