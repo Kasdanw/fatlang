@@ -13,6 +13,7 @@ private:
 
     int pos;
 
+    ASTNode* ParseComparison();
     ASTNode* ParseExpresion();
     ASTNode* ParseAssigment();
     ASTNode* ParseTerm();

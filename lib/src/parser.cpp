@@ -99,7 +99,7 @@ ASTNode* parser::ParseAssigment() {
     if (currentToken().type == TokenType::PRINT) {
         consume(TokenType::PRINT);
         consume(TokenType::LPAR);
-        ASTNode* arg = ParseExpresion();
+        ASTNode* arg = ParseComparison();
         consume(TokenType::RPAR);
         ASTNode* node = new ASTNode;
         node->left = arg;
@@ -125,7 +125,7 @@ ASTNode* parser::ParseAssigment() {
         std::string name = currentToken().value;
         consume(TokenType::IDENTIFIER);
         consume(TokenType::EQUALS);
-        ASTNode* arg = ParseExpresion();
+        ASTNode* arg = ParseComparison();
         ASTNode* node = new ASTNode;
         node->idValue = name;
         node->right = arg;
@@ -141,7 +141,7 @@ ASTNode* parser::ParseAssigment() {
         advance();
         advance();
         
-        ASTNode* right = ParseExpresion();
+        ASTNode* right = ParseComparison();
         ASTNode* node = new ASTNode;
         node->type = Assigment;
         node->idValue = name;
@@ -149,7 +149,23 @@ ASTNode* parser::ParseAssigment() {
         return node;
     }
 
-    return ParseExpresion();
+    return ParseComparison();
+}
+
+ASTNode* parser::ParseComparison() {
+    ASTNode* left = ParseExpresion();
+    while (currentToken().type == TokenType::EQEQ || currentToken().type == TokenType::LT || currentToken().type == TokenType::GT || currentToken().type == TokenType::GE || currentToken().type == TokenType::LE || currentToken().type == TokenType::NE) {
+        TokenType op = currentToken().type;
+        advance();
+        ASTNode* right = ParseExpresion();
+        ASTNode* node = new ASTNode;
+        node->type = BinaryOp;
+        node->op = op;
+        node->left = left;
+        node->right = right;
+        left = node;
+    }
+    return left;
 }
 
 ASTNode* parser::ParseExpresion() {

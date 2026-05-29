@@ -24,7 +24,13 @@ int evaluate(ASTNode* node, std::map<std::string, int>& variables) {
         case BinaryOp: {
             int left = evaluate(node->left, variables);
             int right = evaluate(node->right, variables);
-            switch (node->op) {
+            switch (node->op) { 
+                case TokenType::EQEQ: return left == right;
+                case TokenType::GE: return left >= right;
+                case TokenType::LE: return left <= right;
+                case TokenType::LT: return left < right;
+                case TokenType::GT: return left > right;
+                case TokenType::NE: return left != right;
                 case TokenType::PLUS: return left + right;
                 case TokenType::MINUS: return left - right;
                 case TokenType::STAR: return left * right;
